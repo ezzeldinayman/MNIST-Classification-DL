@@ -6,6 +6,13 @@ The **Cross-Language Image Inference System** achieves seamless integration of P
 
 1. **Python Server Setup**: The system utilizes the FastAPI web framework to create a Python server. UVicorn serves as the ASGI server to efficiently handle incoming HTTP requests. The server exposes an API endpoint to receive image data through POST requests.
 
+    First you have to clone the repository using git clone, then create a new python enviroment, activate it and run:
+
+    ```
+    pip install -r requirements.txt
+    ```
+    This will install all necessary libraries for the python server.
+
     To start the server, open a terminal in the script's path and execute the following command:
     
     ```
@@ -13,6 +20,8 @@ The **Cross-Language Image Inference System** achieves seamless integration of P
     ```
 
 2. **C++ CLI Client**: A lightweight C++ CLI application is developed to interact with the Python server. The client prompts the user to input the path to an image file. It constructs an HTTP POST request, attaches the image data, and sends it to the Python server using the basic sockets library.
+
+    Make sure you enter the correct host address and port (UVicorn inputs) in the C++ client code befor compiling
 
     Compile the cpp file to obtain an executable suitable for your OS, and then start it in the terminal. The program will prompt you for the image path.
 
